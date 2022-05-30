@@ -12,6 +12,7 @@ const PORT = process.env.PORT
 // Getting Directories
 const publicDirectory = path.join(__dirname, '../public')
 const viewsDirectory = path.join(__dirname, '../views/templates')
+const partialsDirectory = path.join(__dirname, '../views/partials')
 
 // Setting Directories
 app.use(express.static(publicDirectory))
@@ -19,6 +20,7 @@ app.use(express.static(publicDirectory))
 // Setting HBS as View Engine
 app.set('view engine', 'hbs')
 app.set('views', viewsDirectory)
+hbs.registerPartials(partialsDirectory)
 
 // Routes
 app.use('/', routes)

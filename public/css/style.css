@@ -1,0 +1,17 @@
+/* Nav Style */
+nav {
+	padding: 10px 20px;
+}
+nav li {
+	display: inline;
+	margin-right: 50px;
+}
+nav a {
+	text-decoration: none;
+	color: gray;
+}
+
+/* Main Body Style */
+main {
+	height: 70vh;
+}
