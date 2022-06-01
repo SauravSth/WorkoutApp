@@ -7,7 +7,7 @@ router.use('/', home)
 const adminDashboard = require('./api/adminDashboard')
 router.use('/admin', adminDashboard)
 
-const workout = require('./api/workouts')
-router.use('/workout', workout)
+const workoutAdmin = require('./api/workouts')
+router.use('/admin', workoutAdmin)
 
 module.exports = router
