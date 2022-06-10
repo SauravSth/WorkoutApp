@@ -1,13 +1,15 @@
-const getWorkout = 'SELECT * FROM workout'
-const getWorkoutById = 'SELECT * FROM workout WHERE id = $1'
-const insertWorkout = 'INSERT INTO workout (name, description) VALUES ($1, $2)'
-const updateWorkout = 'UPDATE workout SET name=$1, description=$2 WHERE id=$3'
-const deleteWorkoutById = 'DELETE FROM workout WHERE id = $1'
+const getExercise = "SELECT * FROM exercise";
+const getExerciseById = "SELECT * FROM exercise WHERE id = $1";
+const insertExercise =
+	"INSERT INTO exercise (exercise_name, exercise_description, target) VALUES ($1, $2, $3)";
+const updateExercise =
+	"UPDATE exercise SET exercise_name=$1, exercise_description=$2 target=$3 WHERE id=$4";
+const deleteExerciseById = "DELETE FROM exercise WHERE id = $1";
 
 module.exports = {
-	getWorkout,
-	getWorkoutById,
-	deleteWorkoutById,
-	insertWorkout,
-	updateWorkout,
-}
+	getExercise,
+	getExerciseById,
+	deleteExerciseById,
+	insertExercise,
+	updateExercise,
+};

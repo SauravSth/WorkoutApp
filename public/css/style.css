@@ -1,3 +1,10 @@
+/* Homepage */
+.homepage-form {
+	width: 30%;
+	margin: auto;
+	margin-top: 50px;
+}
+
 /* Nav Style */
 nav {
 	padding: 10px 20px;
@@ -10,8 +17,18 @@ nav a {
 	text-decoration: none;
 	color: gray;
 }
+nav img {
+	width: 50px;
+}
 
 /* Main Body Style */
 main {
 	height: 70vh;
+}
+
+/* GET Exercise Table */
+table {
+	text-align: center;
+	width: 80%;
+	margin: auto;
 }
