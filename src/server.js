@@ -23,14 +23,6 @@ app.use(express.static(publicDirectory))
 app.set('view engine', 'hbs')
 app.set('views', viewsDirectory)
 hbs.registerPartials(partialsDirectory)
-hbs.registerHelper('times', function (n, block) {
-	let accum = ''
-	for (let i = 0; i < n; i++) {
-		accum += block.fn(i)
-	}
-
-	return accum
-})
 
 // Routes
 app.use('/', routes)
