@@ -1,3 +1,5 @@
+const exerciseSchema = require('../../schemas/exerciseSchema')
+
 exerciseController = {}
 
 exerciseController.getExercisePage = (req, res) => {
@@ -8,7 +10,16 @@ exerciseController.getExercise = (req, res) => {}
 
 exerciseController.getExerciseById = (req, res) => {}
 
-exerciseController.addExercise = (req, res) => {}
+exerciseController.addExercise = async (req, res) => {
+	const exercise = req.body
+
+	if (exercise) {
+		const newExercise = new exerciseSchema(exercise)
+		const exerciseSave = await newExercise.save()
+
+		res.send(exerciseSave)
+	}
+}
 
 exerciseController.updateExercise = (req, res) => {
 	const id = req.params.id
